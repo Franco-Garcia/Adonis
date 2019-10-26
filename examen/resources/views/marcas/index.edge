@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ventas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    {{ style('style') }}
+  </head>
+  <body>
+  
+    <div class="container">
+    
+      <h1 class="title" style="margin-left: 450px;">Marcas</h1>
+      <input class="button is-success is-rounded" style="margin-left: 430px;" type="button" value="Regresar" onclick="location.href='http://127.0.0.1:3333'" />
+      <input class="button is-success is-rounded" type="button" value="Agregar" onclick="location.href='http://127.0.0.1:3333/marcas/crear'" />
+        <table class="table" style="margin-left: 270px;">
+            <tr>
+                <th style="width:100px; height: 20px;">Nombre</th>
+                <th style="width:100px; height: 20px;">Proveedor</th>
+                <th style="width:100px; height: 20px;">Producto</th>
+            </tr>
+            <ul>
+                @each(marca in marca)
+                    <tr>
+                        <th style="width:100px; height: 20px;">{{marca.nombre}}</th>
+                        <th style="width:100px; height: 20px;">{{marca.proveedor_id}}</th>
+                        <th style="width:100px; height: 20px;">{{marca.productos_id}}</th>
+                        <th style="width:100px; height: 20px;"><input class="button is-warning is-rounded" type="button" value="Editar" onclick="location.href='http://127.0.0.1:3333/marca/editar/{{proveedor.id}}'"  /></th>
+                        <th style="width:100px; height: 20px;"><input class="button is-danger is-rounded" type="button" value="Eliminar" onclick="location.href='http://127.0.0.1:3333/marca/eliminar/{{proveedor.id}}'"  /></th>
+
+                    </tr>
+                @endeach
+            </ul>
+        </table>  
+        <br><br><br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br>
+      </div>
+    
+  </body>
+</html>

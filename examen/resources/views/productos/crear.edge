@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ventas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    {{ style('style') }}
+  </head>
+  <body>
+  <section>
+    
+    <div >
+      
+      <h1 class="title">
+        Agregar producto
+      </h1><br><br>
+      <form action="http://127.0.0.1:3333/productos/crear" method="POST">
+        <div >
+          <div>
+            <h3 style="color:white">
+              Codigo <input class="input is-success is-rounded" name="codigo" placeholder="Codigo"/>
+            </h3><br>
+            <h3 style="color:white">
+              Nombre <input class="input is-success is-rounded" name="nombre" placeholder="Nombre"/>
+            </h3><br>
+            <h3 style="color:white">
+              Precio <input class="input is-success is-rounded" name="precio" placeholder="Precio"/>
+            </h3><br>
+            <h3 style="color:white">
+              Existencia <input class="input is-success is-rounded" name="existencia" placeholder="Existencia"/>
+            </h3><br>
+            <input class="button is-success is-rounded" type="button" style="margin-left: 50px;" value="Cancelar" onclick="location.href='http://127.0.0.1:3333/productos'" />
+            <input class="button is-success is-rounded" type="submit" value="Agregar" />
+            <<br><br>><br><br><br><br><br><br><br><br>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+    
+  </body>
+</html>
